@@ -12,6 +12,5 @@ public class Lizard : MonoBehaviour
         {
             GetComponent<Attacker>().Attack(otherObject);
         }
-
     }
 }
