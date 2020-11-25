@@ -41,7 +41,6 @@ public class Attacker : MonoBehaviour
     {
         Animator animator = GetComponent<Animator>();
         animator.SetBool("IsAttacking", false);
-        //SetMovementSpeed(currentSpeed);
     }
     public void StrikeCurrentTarget(float damage)
     {
