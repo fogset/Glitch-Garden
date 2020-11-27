@@ -9,7 +9,16 @@ public class Attacker : MonoBehaviour
     float currentSpeed = 1f;
     [SerializeField] float health = 100;
     GameObject currentTarget;
-    
+
+    private void Awake()
+    {
+        FindObjectOfType<LevelController>().AttackerSpawned();
+    }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelController>().AttackerKilled();
+    }
 
     // Update is called once per frame
     void Update()

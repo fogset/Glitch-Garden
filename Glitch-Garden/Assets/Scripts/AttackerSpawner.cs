@@ -32,4 +32,8 @@ public class AttackerSpawner : MonoBehaviour
         newAttacker.transform.parent = transform;
     }
 
+    public void StopSpawning()
+    {
+        spawn = false;
+    }
 }
