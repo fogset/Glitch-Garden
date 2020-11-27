@@ -7,8 +7,9 @@ public class Projectile : MonoBehaviour
 {
     //GameSession gameSession;
     int score;
-    [SerializeField] float speed = 1f;
-    [SerializeField] float damage = 50;
+    [SerializeField] float speed = 5f;
+    [SerializeField] float damage = 300;
+
     void Start()
     {
         //gameSession = FindObjectOfType<GameSession>();

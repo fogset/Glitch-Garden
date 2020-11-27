@@ -7,7 +7,6 @@ public class Attacker : MonoBehaviour
 {
     [Range(0f, 5f)]
     float currentSpeed = 1f;
-    [SerializeField] float health = 100;
     GameObject currentTarget;
 
     private void Awake()
