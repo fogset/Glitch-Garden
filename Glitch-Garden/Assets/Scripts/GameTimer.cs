@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class GameTimer : MonoBehaviour
 {
     [Tooltip("Our level timer in SECONDS")]
-    [SerializeField] float levelTime = 10;
+    private float levelTime = 10;
     bool triggerLevelFinished = false;
+
+    private void Start()
+    {
+        levelTime = PlayerPrefsController.GetDifficulty();
+    }
 
     // Update is called once per frame
     void Update()
@@ -25,5 +30,10 @@ public class GameTimer : MonoBehaviour
             FindObjectOfType<LevelController>().LevelTimerFinished();
             triggerLevelFinished = true;
         }
+    }
+
+    public void SetLevelTimer(float time)
+    {
+        levelTime = time;
     }
 }

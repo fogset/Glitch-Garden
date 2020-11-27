@@ -6,7 +6,7 @@ using UnityEngine;
 public class Attacker : MonoBehaviour
 {
     [Range(0f, 5f)]
-    [SerializeField] float currentSpeed = 1f;
+    float currentSpeed = 1f;
     [SerializeField] float health = 100;
     GameObject currentTarget;
 
