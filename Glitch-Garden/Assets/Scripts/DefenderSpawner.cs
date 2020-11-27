@@ -19,17 +19,20 @@ public class DefenderSpawner : MonoBehaviour
 
     private void AttemptToPlaceDefenderAt(Vector2 gridPos)
     {
-        var StarDisplay = FindObjectOfType<StarDisplay>();
-        int defenderCost = defenderPrefab.GetStarCost();
-        if(StarDisplay.HaveEnoughStars(defenderCost) == true)
+        if(defenderPrefab)
         {
-
-            if (repeatedPostition(gridPos) == false)
+            var StarDisplay = FindObjectOfType<StarDisplay>();
+            int defenderCost = defenderPrefab.GetStarCost();
+            if (StarDisplay.HaveEnoughStars(defenderCost) == true)
             {
-                Debug.Log("clicked this postion: " + gridPos);
-                SpawnDefender(gridPos);
+
+                if (repeatedPostition(gridPos) == false)
+                {
+                    Debug.Log("clicked this postion: " + gridPos);
+                    SpawnDefender(gridPos);
+                }
+                StarDisplay.SpendStars(defenderCost);
             }
-            StarDisplay.SpendStars(defenderCost);
         }
     }
 

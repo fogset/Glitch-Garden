@@ -30,8 +30,26 @@ public class LevelLoad : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+    public void RestartScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Start Screen");
+    }
+
     public void LoadYouLose()
     {
         SceneManager.LoadScene("Lose Screen");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }

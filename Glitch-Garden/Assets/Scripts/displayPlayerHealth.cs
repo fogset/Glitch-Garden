@@ -25,7 +25,7 @@ public class displayPlayerHealth : MonoBehaviour
             UpdateDisplay();
             if(playerHealthNumber <= 0)
             {
-                FindObjectOfType<LevelLoad>().LoadYouLose();
+                FindObjectOfType<LevelController>().HandleLoseCondition();
             }
     }
 }
